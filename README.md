@@ -10,7 +10,7 @@ published on: https://www.npmjs.com/package/vue-winwheel
 
 Download this repository
 ```shell
-git clone git@github.com:rebotak/vue-winwheel.git
+git clone git@github.com:mazfreelance/vue-winwheel.git
 ```
 
 Go to the demo folder
@@ -34,7 +34,7 @@ npm serve
 ## npm
 
 ```shell
-$ npm install vue-winwheel
+$ npm install vue-winwheel-reversion --save
 ```
 
 # Usage
@@ -42,15 +42,21 @@ $ npm install vue-winwheel
 ## Basic
 
 ```html
-<VueWinwheel :segments="options"
-	:wheelSize="wheelSize"
-	:pageTitle="pageTitle"
-	:lineWidth="lineWidth" />
+  <vue-winwheel
+    :segments="options"
+    :wheelSize="wheelSize"
+    :pageTitle="pageTitle"
+    :lineWidth="lineWidth"
+    :btnColor="btnColor"
+    :btnText="btnText"
+    :spinSound="spinSound"
+    :customSpinSound="customSpinSound"
+  />
 ```
 
 ```
 <script>
-import VueWinwheel from 'vue-winwheel/vue-winwheel'
+import VueWinwheel from 'vue-winwheel-reversion/vue-winwheel'
 
 export default {
   components:{
@@ -58,6 +64,9 @@ export default {
   },
   data(){
     return{
+		wheelSize: 310,
+      pageTitle: 'Vue-Wheel'
+      lineWidth: 3,
       options:[
 					{
 						textFillStyle: '#fff',
