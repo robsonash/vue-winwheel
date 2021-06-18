@@ -2,6 +2,8 @@
 
 a winwheel for vuejs based on http://dougtesting.net/home
 
+fork on: https://github.com/rebotak/vue-winwheel
+
 published on: https://www.npmjs.com/package/vue-winwheel
 
 # Demo
@@ -40,7 +42,10 @@ $ npm install vue-winwheel
 ## Basic
 
 ```html
-<VueWinwheel :segments="options" />
+<VueWinwheel :segments="options"
+	:wheelSize="wheelSize"
+	:pageTitle="pageTitle"
+	:lineWidth="lineWidth" />
 ```
 
 ```

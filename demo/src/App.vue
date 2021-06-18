@@ -1,6 +1,10 @@
 <template>
   <div id="app">
-    <vue-winwheel :segments="options" />
+    <vue-winwheel 
+      :segments="options"
+      :wheelSize="wheelSize"
+      :pageTitle="pageTitle"
+      :lineWidth="lineWidth" />
   </div>
 </template>
 
@@ -14,6 +18,9 @@ export default {
   },
   data() {
     return {
+      pageTitle: "Vue-Wheel",
+      wheelSize: 400,
+      lineWidth: 3,
       options: [
         {
           textFillStyle: "#fff",

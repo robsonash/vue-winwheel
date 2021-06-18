@@ -1,15 +1,15 @@
 <template>
 		<section class="vue-winwheel">
 			<div class="mobile-container">
-				<h1>Vue-Winwheel</h1>
+				<h1>{{pageTitle}}</h1>
 				<div class="wheel-wrapper">
 					<div class="canvas-wrapper">
-						<canvas id="canvas" width="310" height="310">
+						<canvas id="canvas" :width="getWheelSize()" :height="getWheelSize()">
 							<p style="{color: white}" align="center">Sorry, your browser doesn't support canvas. Please try Google Chrome.</p>
 						</canvas>
 					</div>
 					<div class="button-wrapper">
-						<a class="btn btn-play" href="#" @click.prevent="startSpin()" v-if="!loadingPrize && !wheelSpinning">SPIN!</a>
+						<a class="btn btn-play" href="#" @click="startSpin()" v-if="!loadingPrize && !wheelSpinning">SPIN!</a>
 					</div>
 				</div>
 			</div>
@@ -34,52 +34,12 @@ import * as Winwheel from './Winwheel'
 export default {
   name: 'VueWinWheel',
   props:{
-		segments:{
-			default(){
-				return [
-					{
-						textFillStyle: '#fff',
-						fillStyle: '#000',
-						text:'Prize 1'
-					},
-					{
-						textFillStyle: '#000',
-						fillStyle: '#fadede',
-						text:'Prize 2'
-					},
-					{
-						textFillStyle: '#fff',
-						fillStyle: '#000',
-						text:'Prize 3'
-					},
-					{
-						textFillStyle: '#000',
-						fillStyle: '#fadede',
-						text:'Prize 4'
-					},
-					{
-						textFillStyle: '#fff',
-						fillStyle: '#000',
-						text:'Prize 5'
-					},
-					{
-						textFillStyle: '#000',
-						fillStyle: '#fadede',
-						text:'Prize 6'
-					},
-					{
-						textFillStyle: '#fff',
-						fillStyle: '#000',
-						text:'Prize 7'
-					},
-					{
-						textFillStyle: '#000',
-						fillStyle: '#fadede',
-						text:'Prize 8'
-					}
-				]
-			}
-		}
+	  	btnColor				: String,
+		pageTitle				: String,
+		wheelSize				: null,
+		segments				: Array,
+		spinSound				: Boolean,
+		customSpinSound	: String
   },
   data () {
     return {
@@ -102,6 +62,14 @@ export default {
     }
   },
   methods: {
+	  getWheelSize(){
+			if (this.wheelSize){
+				return this.wheelSize
+			}
+			else {
+				return 400
+			}
+		},
     showPrize () {
       this.modalPrize = true
     },
@@ -245,9 +213,7 @@ export default {
 .vue-winwheel .canvas-wrapper:before {
 	content: '';
 	display: block;
-	width: 310px;
 	background: #0f0f0f;
-	height: 310px;
 	position: absolute;
 	left: 0;
 	right: 0;
