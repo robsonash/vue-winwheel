@@ -7,8 +7,8 @@
       :lineWidth="lineWidth"
       :btnColor="btnColor"
       :btnText="btnText"
-      :spinSound="spinSound"
-      :customSpinSound="customSpinSound"
+	  :spin="spin"
+	  :duration="duration"
     />
   </div>
 </template>
@@ -27,8 +27,8 @@ export default {
       btnColor        : "",
       btnText         : "",
       lineWidth       : 3,
-      spinSound       : true,
-      customSpinSound : "",
+      duration        : 5,
+      spin       	  : 5,
       options         :[
 					{
 						textFillStyle: '#fff',
@@ -80,7 +80,8 @@ export default {
 					}
 				]
     }
-  }
+  },
+  methods: {}
 }
 </script>
 

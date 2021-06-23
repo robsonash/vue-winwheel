@@ -24,7 +24,7 @@
 
 <script>
 	import * as Winwheel from './Winwheel'
-	import prizeModal from './prizeModal'
+	import prizeModal from './demo/src/prizeModal'
 	export default {
 		components: {
 			prizeModal
@@ -35,8 +35,8 @@
 			pageTitle: String,
 			wheelSize: null,
 			segments: Array,
-			spinSound: Boolean,
-			customSpinSound: String,
+			duration: Number,
+			spin: Number,
 		},
 		data() {
 			return {
@@ -80,8 +80,8 @@
 						segments: this.segments,
 						animation: {
 							type: 'spinToStop',
-							duration: 5,
-							spins: 5,
+							duration: this.duration,
+							spins: this.spin,
 							callbackFinished: this.onFinishSpin
 						}
 					})

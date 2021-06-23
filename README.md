@@ -44,17 +44,17 @@ $ npm install vue-winwheel-reversion --save
 ```html
   <vue-winwheel
     :segments="options"
-    :wheelSize="wheelSize"
-    :pageTitle="pageTitle"
-    :lineWidth="lineWidth"
-    :btnColor="btnColor"
-    :btnText="btnText"
-    :spinSound="spinSound"
-    :customSpinSound="customSpinSound"
+	:wheelSize="wheelSize"
+	:pageTitle="pageTitle"
+	:lineWidth="lineWidth"
+	:btnColor="btnColor"
+	:btnText="btnText"
+	:spin="spin"
+	:duration="duration"
   />
 ```
 
-```
+```html
 <script>
 import VueWinwheel from 'vue-winwheel-reversion/vue-winwheel'
 
@@ -64,9 +64,13 @@ export default {
   },
   data(){
     return{
-		wheelSize: 310,
-      pageTitle: 'Vue-Wheel'
-      lineWidth: 3,
+	  pageTitle       : "Vue-Wheel",
+      wheelSize       : 400,
+      btnColor        : "",
+      btnText         : "",
+      lineWidth       : 3,
+      duration        : 5,
+      spin       	  : 5,
       options:[
 					{
 						textFillStyle: '#fff',
