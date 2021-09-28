@@ -19,14 +19,14 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/rebotak/vue-winwheel.git"
+		"url": "git+https://github.com/mazfreelance/vue-winwheel.git"
 	},
 	"license": "MIT",
 	"dependencies": {
-		"gsap": "^2.0.2",
+		"gsap": "^3.7.1",
 		"vue": "^2.5.17",
 		"vue-loader": "^15.4.2",
-		"vue-winwheel": "^0.1.4"
+		"vue-winwheel-reversion": "^1.2.0"
 	},
 	"devDependencies": {
 		"@vue/cli-service": "^3.1.4",

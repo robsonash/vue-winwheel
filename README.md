@@ -25,7 +25,7 @@ npm install
 
 And run the project
 ```shell
-npm serve
+npm run serve
 ```
 
 

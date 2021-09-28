@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import VueWinwheel from './VueWinwheel.vue'
+import VueWinwheel from '../node_modules/vue-winwheel-reversion/vue-winwheel.vue'
 export default {
   name: 'app',
   components: {
