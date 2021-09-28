@@ -19,6 +19,6 @@
 	},
 	"license": "MIT",
 	"dependencies": {
-		"gsap": "^2.0.2"
+		"gsap": "^3.7.1"
 	}
 }
