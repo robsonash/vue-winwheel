@@ -10,7 +10,7 @@
                     </div>
                     <div class="modal-body">
                         <slot name="body">
-                            {{getPrizeDesc()}}
+                    Clique e entre no grupo:  <a :href="getPrizeDesc()" target="_blank">{{getPrizeDesc()}}</a> 
                         </slot>
                     </div>
                     <div class="modal-footer">
@@ -18,7 +18,7 @@
                             {{prizeFooter}}
                             <button class="modal-default-button" @click="$emit('close')">
                     OK
-                  </button>
+                </button>
                         </slot>
                     </div>
                 </div>

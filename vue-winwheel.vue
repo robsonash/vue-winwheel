@@ -128,7 +128,7 @@
 				if (this.btnText) {
 					return this.btnText
 				} else {
-					return 'SPIN!'
+					return 'Rode a Roleta!'
 				}
 			}
 		},
