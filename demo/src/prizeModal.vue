@@ -17,7 +17,7 @@
                         <slot name="footer">
                             {{prizeFooter}}
                             <button class="modal-default-button" @click="$emit('close')">
-                    OK
+                    Voltar
                 </button>
                         </slot>
                     </div>
@@ -34,6 +34,7 @@
             prizeDesc: String,
             prizeFooter: String
         },
+        /* tes */
         methods: {
             getPrizeName() {
                 if (this.prizeName) {
