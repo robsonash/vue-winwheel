@@ -6,7 +6,7 @@
 				<div class="canvas-wrapper">
 					<canvas id="canvas" :width="getWheelSize()" :height="getWheelSize()">
 							<p style="{color: white}" align="center">
-								Sorry, your browser doesn't support canvas. Please try Google Chrome.
+								Desculpe, seu navegador não suporta canvas. Por favor, tente o Google Chrome.
 							</p>
 						</canvas>
 				</div>
