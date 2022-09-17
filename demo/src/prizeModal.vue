@@ -10,7 +10,7 @@
                     </div>
                     <div class="modal-body">
                         <slot name="body">
-                    Clique e entre no grupo:  <a :href="getPrizeDesc()" target="_blank">{{getPrizeDesc()}}</a> 
+                    <button><a :href="getPrizeDesc()" target="_blank">Clique e entre no grupo</a></button> 
                         </slot>
                     </div>
                     <div class="modal-footer">
