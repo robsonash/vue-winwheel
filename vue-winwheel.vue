@@ -128,7 +128,7 @@
 				if (this.btnText) {
 					return this.btnText
 				} else {
-					return 'Rode a Roleta!'
+					return 'Gire para entrar no grupo do Thomaz!'
 				}
 			}
 		},
