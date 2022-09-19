@@ -250,7 +250,7 @@
 		height: 118px;
 	}
 	.vue-winwheel .wheel-wrapper .btn.btn-play {
-		padding: 0 58px !important;
+		padding: 0 58px;
 		height: 40px;
 		line-height: 40px;
 		color: white;
